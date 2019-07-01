@@ -1,0 +1,10 @@
+{
+  "extends": [
+  	"@ministryofjustice/eslint-config-fb",
+  	"plugin:ava/recommended"
+  ],
+  "rules": {
+	  "complexity": ["error", 5],
+	  "max-depth": ["error", 5]
+  }
+}

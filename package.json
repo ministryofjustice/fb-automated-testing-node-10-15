@@ -1,0 +1,30 @@
+{
+  "name": "fb-automated-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "End to end tests for a Form Builder form",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && ava --reset-cache && ava -v",
+    "test:ci": "rm -rf test-results && mkdir -p test-results/traces && mkdir -p test-results/har && mkdir -p test-results/screenshots && node ./node_modules/.bin/ava -v -- --screenshots"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@ministryofjustice/eslint-config-fb": "^1.0.7",
+    "ava": "^2.1.0",
+    "chrome-har": "^0.10.0",
+    "dotenv": "^8.0.0",
+    "esm": "^3.2.25",
+    "mailosaur": "^5.0.8",
+    "pdf-parse": "^1.1.1",
+    "puppeteer": "^1.18.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "devDependencies": {
+    "eslint-plugin-ava": "^7.1.0"
+  }
+}
